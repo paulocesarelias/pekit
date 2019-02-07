@@ -1,2 +1,2 @@
 # pekit
-A pack of utilities functions that can be easily reused between projects for anyone.
+A pack of php utilities functions that can be easily reused between projects for anyone.
