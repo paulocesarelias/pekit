@@ -7,8 +7,6 @@
     "utility"
   ],
   "homepage": "https://github.com/paulocesarelias/pekit",
-  "minimum-stability": "stable",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Paulo Elias",
