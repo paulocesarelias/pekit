@@ -5,25 +5,6 @@ namespace Pekit;
 class Utilities
 {
 		/**
-		 * Gerar UUID
-		 *
-		 * @param $data
-		 * @return string
-		 */
-		public static function uuid($data = "")
-		{
-				if (!$data)
-						$data = openssl_random_pseudo_bytes(16);
-
-				assert(strlen($data) == 16);
-
-				$data[6] = chr(ord($data[6]) & 0x0f | 0x40); // set version to 0100
-				$data[8] = chr(ord($data[8]) & 0x3f | 0x80); // set bits 6-7 to 10
-
-				return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
-		}
-
-		/**
 		 * A prettier dd
 		 *
 		 * @param $value
@@ -49,7 +30,8 @@ class Utilities
 
 				if (!is_numeric($nif) || strlen($nif) != 9)
 						return false;
-				else {
+				else
+				{
 						$nifSplit = str_split($nif);
 						//O primeiro digíto tem de ser 1, 2, 5, 6, 8 ou 9
 						//Ou não, se optarmos por ignorar esta "regra"
@@ -57,10 +39,12 @@ class Utilities
 							in_array($nifSplit[0], array(1, 2, 5, 6, 7, 8, 9))
 							||
 							$ignoreFirst
-						) {
+						)
+						{
 								//Calculamos o dígito de controlo
 								$checkDigit = 0;
-								for ($i = 0; $i < 8; $i++) {
+								for ($i = 0; $i < 8; $i++)
+								{
 										$checkDigit += $nifSplit[$i] * (10 - $i - 1);
 								}
 								$checkDigit = 11 - ($checkDigit % 11);
@@ -71,7 +55,8 @@ class Utilities
 										return true;
 								else
 										return false;
-						} else
+						}
+						else
 								return false;
 				}
 		}
@@ -102,8 +87,8 @@ class Utilities
 				if ($value) $strValue = 'true';
 				else $strValue = 'false';
 
-				$fileString = preg_replace($pattern,"$1$strValue",$string);
-				file_put_contents($envFile,$fileString);
+				$fileString = preg_replace($pattern, "$1$strValue", $string);
+				file_put_contents($envFile, $fileString);
 		}
 
 		/**
@@ -115,9 +100,10 @@ class Utilities
 		 * @param string $f
 		 * @return float
 		 */
-		public static function truncateValue($val, $f="0")
+		public static function truncateValue($val, $f = "0")
 		{
-				if(($p = strpos($val, '.')) !== false) {
+				if (($p = strpos($val, '.')) !== false)
+				{
 						$val = floatval(substr($val, 0, $p + 1 + $f));
 				}
 				return $val;
