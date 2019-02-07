@@ -1,5 +1,5 @@
 {
-  "name": "pekit",
+  "name": "paulocesarelias/pekit",
   "license": "MIT",
   "description": "A pack of php utilities functions that can be easily reused between projects for anyone.",
   "keywords": [
