@@ -1,2 +1,2 @@
 # pekit
-Free utilities functions.
+A pack of utilities functions that can be easily reused between projects for anyone.
