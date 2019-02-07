@@ -1,0 +1,16 @@
+{
+  "name": "pekit",
+  "license": "MIT",
+  "description": "A pack of php utilities functions that can be easily reused between projects for anyone.",
+  "keywords": [
+    "helpers",
+    "utility"
+  ],
+  "homepage": "https://github.com/paulocesarelias/pekit",
+  "authors": [
+    {
+      "name": "Paulo Elias",
+      "email": "coding@paulo-elias.com"
+    }
+  ]
+}
