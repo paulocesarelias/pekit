@@ -14,5 +14,8 @@
       "name": "Paulo Elias",
       "email": "coding@paulo-elias.com"
     }
-  ]
+  ],
+  "require": {
+    "php": ">=5.6"
+  }
 }
